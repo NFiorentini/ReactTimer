@@ -1,0 +1,39 @@
+/*
+Color variables are defined in _variables.scss.
+
+Beginning a file name with an underscore tells
+scss that the file is a partial used with other
+files. The files in the components directory are
+imported via app.css.
+*/
+
+/*
+This fixes gray background color around the lists
+in the Nav bar.*/
+.top-bar, .top-bar ul {
+  background-color: $nav-background;
+}
+
+
+/*
+This nested selector is the equivalent of
+.top-bar .menu-text {}.*/
+.top-bar {
+  .menu-text {
+    color: $nav-text-color;
+  }
+
+  /*
+  By default, Foundation uses
+  .menu > li > a { display: block;
+  padding: .7rem 1rem; }
+  */
+  .menu > .menu-text > a {
+    display: inline;
+    padding: 0;
+  }
+
+  .active-link {
+    font-weight: bold;
+  }
+}

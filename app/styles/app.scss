@@ -1,0 +1,20 @@
+/*
+app/styles/app.scss
+With imports, leave off the underscores & the file
+extensions.
+
+Generally, app.scss files are a series of imports of
+other files that handle the details.
+*/
+@import "base/variables";
+
+// foundation
+@import "base/foundation-settings";
+@import "foundation";
+@include foundation-everything;
+
+// Components
+@import "components/navigation";
+@import "components/clock";
+@import "components/controls";
+@import "components/page-title";
