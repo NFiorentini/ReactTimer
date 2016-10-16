@@ -1,8 +1,8 @@
-var React = require('react');
-var Clock = require('Clock');
-var Controls = require('Controls');
+const React = require('react');
+const Clock = require('Clock');
+const Controls = require('Controls');
 
-var Timer = React.createClass({
+const Timer = React.createClass({
   getInitialState: function () {
     return {
       count: 0,
@@ -46,7 +46,7 @@ var Timer = React.createClass({
   },
 
   render: function () {
-    var {count, timerStatus} = this.state;
+    const {count, timerStatus} = this.state;
 
     return (
       <div>

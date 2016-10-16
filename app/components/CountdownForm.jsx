@@ -1,10 +1,10 @@
-var React = require('react');
+const React = require('react');
 
-var CountdownForm = React.createClass({
+const CountdownForm = React.createClass({
 
   onSubmit: function (e) {
     e.preventDefault();
-    var strSeconds = this.refs.seconds.value;
+    const strSeconds = this.refs.seconds.value;
 
     console.log('input count', $('input').length);
 

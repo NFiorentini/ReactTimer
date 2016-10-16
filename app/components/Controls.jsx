@@ -1,6 +1,6 @@
-var React = require('react');
+const React = require('react');
 
-var Controls = React.createClass({
+const Controls = React.createClass({
 
   propTypes: {
     countdownStatus: React.PropTypes.string.isRequired,
@@ -14,9 +14,9 @@ var Controls = React.createClass({
   },
 
   render: function () {
-    var {countdownStatus} = this.props;
+    const {countdownStatus} = this.props;
 
-    var renderStartStopButton = () => {
+    const renderStartStopButton = () => {
 
       if (countdownStatus === 'started') {
         return (
