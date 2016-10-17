@@ -1,10 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var expect = require('expect');
-var $ = require('jQuery');
-var TestUtils = require('react-addons-test-utils');
-
-var Controls = require('Controls');
+const Controls       = require('Controls');
+const expect         = require('expect');
+const React          = require('react');
+const ReactDOM       = require('react-dom');
+const TestUtils      = require('react-addons-test-utils');
+const $              = require('jQuery');
 
 describe('Controls', () => {
 
@@ -16,25 +15,25 @@ describe('Controls', () => {
 
     it('should render pause when started', () => {
 
-      var controls = TestUtils.renderIntoDocument(
+      const controls = TestUtils.renderIntoDocument(
           <Controls countdownStatus="started"/>);
 
-      var $el = $(ReactDOM.findDOMNode(controls));
+      const $el = $(ReactDOM.findDOMNode(controls));
 
       // jQuery's :contains() filter allows you search
       // the DOM for a target with the given text value.
-      var $pauseButton = $el.find('button:contains(Pause)');
+      const $pauseButton = $el.find('button:contains(Pause)');
 
       expect($pauseButton.length).toBe(1);
     });
 
     it('should render start when paused', () => {
 
-      var controls = TestUtils.renderIntoDocument(
+      const controls = TestUtils.renderIntoDocument(
           <Controls countdownStatus="paused"/>);
 
-      var $el = $(ReactDOM.findDOMNode(controls));
-      var $startButton = $el.find('button:contains(Start)');
+      const $el = $(ReactDOM.findDOMNode(controls));
+      const $startButton = $el.find('button:contains(Start)');
 
       expect($startButton.length).toBe(1);
     });

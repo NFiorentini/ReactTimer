@@ -1,10 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var expect = require('expect');
-var $ = require('jQuery');
-var TestUtils = require('react-addons-test-utils');
-
-var Countdown = require('Countdown');
+const expect           = require('expect');
+const React            = require('react');
+const ReactDOM         = require('react-dom');
+const TestUtils        = require('react-addons-test-utils');
+const Countdown        = require('Countdown');
+const $                = require('jQuery');
 
 describe('Countdown', () => {
 
@@ -17,7 +16,7 @@ describe('Countdown', () => {
     it('should set state to started and countdown',
         (done) => {
 
-      var countdown = TestUtils.renderIntoDocument(
+      const countdown = TestUtils.renderIntoDocument(
           <Countdown/>);
 
       countdown.handleSetCountdown(10);
@@ -36,7 +35,7 @@ describe('Countdown', () => {
     it('should never set count less than zero',
         (done) => {
 
-      var countdown = TestUtils.renderIntoDocument(
+      const countdown = TestUtils.renderIntoDocument(
           <Countdown/>);
 
       countdown.handleSetCountdown(1);
@@ -50,7 +49,7 @@ describe('Countdown', () => {
     it('should pause countdown on paused status',
         (done) => {
 
-      var countdown = TestUtils.renderIntoDocument(
+      const countdown = TestUtils.renderIntoDocument(
           <Countdown/>);
 
       countdown.handleSetCountdown(3);
@@ -68,7 +67,7 @@ describe('Countdown', () => {
 
     it('should reset count on stopped', (done) => {
 
-      var countdown = TestUtils.renderIntoDocument(
+      const countdown = TestUtils.renderIntoDocument(
           <Countdown/>);
 
       countdown.handleSetCountdown(3);

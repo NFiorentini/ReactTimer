@@ -1,21 +1,20 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+const Countdown                      = require('Countdown');
+const Main                           = require('Main');
+const React                          = require('react');
+const ReactDOM                       = require('react-dom');
+const Timer                          = require('Timer');
 
-var {Route, Router, IndexRoute, hashHistory} =
+const {Route, Router, IndexRoute, hashHistory} =
     require('react-router');
 
-var Main = require('Main');
-var Timer = require('Timer');
-var Countdown = require('Countdown');
-
-// Load foundation
 $(document).foundation();
 
-// App css
 require('style!css!sass!applicationStyles')
 
-// Since Countdown is nested under Main, its route
-// is /Countdown.
+/*
+Since Countdown is nested under Main, its route
+is /Countdown.
+*/
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>

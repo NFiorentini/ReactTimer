@@ -9,7 +9,8 @@ imported via app.css.
 
 /*
 This fixes gray background color around the lists
-in the Nav bar.*/
+in the Nav bar.
+*/
 .top-bar, .top-bar ul {
   background-color: $nav-background;
 }
@@ -17,7 +18,8 @@ in the Nav bar.*/
 
 /*
 This nested selector is the equivalent of
-.top-bar .menu-text {}.*/
+.top-bar .menu-text {}.
+*/
 .top-bar {
   .menu-text {
     color: $nav-text-color;

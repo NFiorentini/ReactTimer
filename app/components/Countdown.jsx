@@ -1,7 +1,7 @@
-const React = require('react');
-const Clock = require('Clock');
-const CountdownForm = require('CountdownForm');
-const Controls = require('Controls');
+const Clock                      = require('Clock');
+const Controls                   = require('Controls');
+const CountdownForm              = require('CountdownForm');
+const React                      = require('react');
 
 const Countdown = React.createClass({
 
@@ -15,7 +15,7 @@ const Countdown = React.createClass({
   // Lifecycle method.
   componentDidUpdate: function (prevProps, prevState) {
 
-    if (this.state.countdownStatus !==
+    if(this.state.countdownStatus !==
         prevState.countdownStatus) {
 
       switch (this.state.countdownStatus) {

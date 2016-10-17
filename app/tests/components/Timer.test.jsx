@@ -1,10 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var expect = require('expect');
-var $ = require('jQuery');
-var TestUtils = require('react-addons-test-utils');
-
-var Timer = require('Timer');
+const expect          = require('expect');
+const React           = require('react');
+const ReactDOM        = require('react-dom');
+const TestUtils       = require('react-addons-test-utils');
+const Timer           = require('Timer');
+const $               = require('jQuery');
 
 describe('Timer', () => {
   it('should exist', () => {
@@ -14,7 +13,7 @@ describe('Timer', () => {
   it('should start timer on started status',
       (done) => {
 
-    var timer = TestUtils.renderIntoDocument(<Timer/>);
+    const timer = TestUtils.renderIntoDocument(<Timer/>);
 
     timer.handleStatusChange('started');
     expect(timer.state.count).toBe(0);
@@ -29,7 +28,7 @@ describe('Timer', () => {
   it('should pause timer on paused status',
       (done) => {
 
-    var timer = TestUtils.renderIntoDocument(<Timer/>);
+    const timer = TestUtils.renderIntoDocument(<Timer/>);
 
     timer.setState({count: 10});
     timer.handleStatusChange('started');
@@ -45,7 +44,7 @@ describe('Timer', () => {
   it('should clear count on stopped status',
       (done) => {
 
-    var timer = TestUtils.renderIntoDocument(<Timer/>);
+    const timer = TestUtils.renderIntoDocument(<Timer/>);
 
     timer.setState({count: 10});
     timer.handleStatusChange('started');

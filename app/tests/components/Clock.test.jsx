@@ -1,10 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var expect = require('expect');
-var $ = require('jQuery');
-var TestUtils = require('react-addons-test-utils');
+var Clock           = require('Clock');
+var expect          = require('expect');
+var React           = require('react');
+var ReactDOM        = require('react-dom');
+var TestUtils       = require('react-addons-test-utils');
+var $               = require('jQuery');
 
-var Clock = require('Clock');
+
 
 // describe() allows you to group your tests & then
 // to name that group.

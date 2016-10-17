@@ -1,14 +1,16 @@
-const React = require('react');
-const Clock = require('Clock');
-const Controls = require('Controls');
+const Clock                              = require('Clock');
+const Controls                        = require('Controls');
+const React                              = require('react');
 
-const Timer = React.createClass({
+const Timer  = React.createClass({
+
   getInitialState: function () {
     return {
       count: 0,
       timerStatus: 'stopped'
     };
   },
+
   componentDidUpdate: function (prevProps, prevState) {
 
     if (this.state.timerStatus !== prevState.timerStatus) {

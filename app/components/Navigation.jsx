@@ -1,5 +1,5 @@
-const React = require('react');
-const {Link, IndexLink} = require('react-router');
+const {Link, IndexLink}           = require('react-router');
+const React                       = require('react');
 
 {/*
 Navigation is a stateless functional component.
