@@ -1,9 +1,9 @@
-const expect          = require('expect');
-const React           = require('react');
-const ReactDOM        = require('react-dom');
-const TestUtils       = require('react-addons-test-utils');
-const Timer           = require('Timer');
-const $               = require('jQuery');
+const expect           = require('expect');
+const React            = require('react');
+const ReactDOM         = require('react-dom');
+const TestUtils        = require('react-addons-test-utils');
+const Timer            = require('Timer');
+const $                = require('jQuery');
 
 describe('Timer', () => {
   it('should exist', () => {

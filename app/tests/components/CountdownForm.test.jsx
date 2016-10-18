@@ -1,9 +1,9 @@
-const CountdownForm   = require('CountdownForm');
-const expect          = require('expect');
-const React           = require('react');
-const ReactDOM        = require('react-dom');
-const TestUtils       = require('react-addons-test-utils');
-const $               = require('jQuery');
+const CountdownForm    = require('CountdownForm');
+const expect           = require('expect');
+const React            = require('react');
+const ReactDOM         = require('react-dom');
+const TestUtils        = require('react-addons-test-utils');
+const $                = require('jQuery');
 
 /*
 describe() defines a group whose name is

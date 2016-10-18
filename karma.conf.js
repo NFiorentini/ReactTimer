@@ -2,7 +2,7 @@
 karma.conf.js specifies how we want to run our tests.
 */
 
-var webpackConfig = require('./webpack.config.js');
+var webpackConfig          = require('./webpack.config.js');
 
 module.exports = function (config) {
   config.set({
@@ -20,7 +20,7 @@ module.exports = function (config) {
     reporters: ['mocha'],
 
     /*
-    client allows us to send details down to the 
+    client allows us to send details down to the
     individual frameworks. Here, we tell mocha that
     we want to wait 5 second before test timeout.
     */

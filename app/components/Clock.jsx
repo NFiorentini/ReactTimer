@@ -1,4 +1,4 @@
-const React                              = require('react');
+const React          = require('react');
 
 const Clock = React.createClass({
 
@@ -11,7 +11,7 @@ const Clock = React.createClass({
   },
 
   formatSeconds: function (totalSeconds) {
-    
+
     let seconds = totalSeconds % 60;
     let minutes = Math.floor(totalSeconds / 60);
 

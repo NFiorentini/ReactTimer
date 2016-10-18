@@ -1,4 +1,4 @@
-const React                              = require('react');
+const React          = require('react');
 
 const CountdownForm = React.createClass({
 
@@ -15,7 +15,7 @@ const CountdownForm = React.createClass({
   },
 
   render: function () {
-    
+
     return (
       <div>
         <form ref="form" onSubmit={this.onSubmit}
