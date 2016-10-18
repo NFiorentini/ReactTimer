@@ -6,6 +6,7 @@ const Timer            = require('Timer');
 const $                = require('jQuery');
 
 describe('Timer', () => {
+  
   it('should exist', () => {
     expect(Timer).toExist();
   });

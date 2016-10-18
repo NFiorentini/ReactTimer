@@ -1,6 +1,6 @@
-const Clock                              = require('Clock');
+const Clock                           = require('Clock');
 const Controls                        = require('Controls');
-const React                              = require('react');
+const React                           = require('react');
 
 const Timer  = React.createClass({
 
@@ -64,6 +64,8 @@ const Timer  = React.createClass({
   },
 
   handleStatusChange: function (newTimerStatus) {
+    // console.log(newTimerStatus);
+    
     this.setState({timerStatus: newTimerStatus});
   },
 
