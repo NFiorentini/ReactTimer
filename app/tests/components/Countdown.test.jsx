@@ -14,10 +14,10 @@ describe('Countdown', () => {
   describe('handleSetCountdown', () => {
 
     /*
-    The setTimeout() function makes this it()
+    The setTimeout() function will make an it()
     function ansychronous. For Mocha to support
     asychronous tests, include the arg done, which
-    lets Mocha know that it sould wait until done is
+    lets Mocha know that it should wait until done is
     called to stop the test. Then call done once
     we're done.
     */
