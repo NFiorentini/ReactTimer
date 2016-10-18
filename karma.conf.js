@@ -2,16 +2,17 @@
 karma.conf.js specifies how we want to run our tests.
 */
 
-var webpackConfig          = require('./webpack.config.js');
+const webpackConfig        = require('./webpack.config.js');
 
 module.exports = function (config) {
+  
   config.set({
     browsers: ['Chrome'],
     singleRun: true,
     frameworks: ['mocha'],
     files: [
       'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/foundation-sites/dist/foundation.min.js',
+    'node_modules/foundation-sites/dist/foundation.min.js',
       'app/tests/**/*.test.jsx'
     ],
     preprocessors: {

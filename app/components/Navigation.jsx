@@ -1,9 +1,9 @@
 const {Link, IndexLink}           = require('react-router');
 const React                       = require('react');
 
-{/*
+/*
 Navigation is a stateless functional component.
-*/}
+*/
 const Navigation = () => {
   return (
     <div className="top-bar">

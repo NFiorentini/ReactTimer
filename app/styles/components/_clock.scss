@@ -3,7 +3,13 @@
   background-color: $clock-bg-color;
   border: 2px solid $clock-border-color;
   border-radius: 50%;
+
+  // flex is used here to center the clock
+  // text in the middle of the circle.
   display: flex;
+
+  // rem - Root ems; uses root of the
+  // browser as the default.
   height: 14rem;
   justify-content: center;
   margin: 4rem auto;

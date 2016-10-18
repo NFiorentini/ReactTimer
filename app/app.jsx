@@ -9,7 +9,7 @@ const {Route, Router, IndexRoute, hashHistory} =
 
 $(document).foundation();
 
-require('style!css!sass!applicationStyles')
+require('style!css!sass!applicationStyles');
 
 {/*
 Since Countdown is nested under Main, its route
@@ -19,7 +19,7 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <Route path="countdown" component={Countdown}/>
-      
+
       {/*
         IndexRoute doesn't take a path attribute & gets
         rendered if nothing else gets rendered.

@@ -6,9 +6,11 @@ const TestUtils        = require('react-addons-test-utils');
 const $                = require('jQuery');
 
 /*
-describe() allows you to group & name your tests.
+describe() allows you to group your tests
+& to name that group.
 */
 describe('Clock', () => {
+
   it('should exist', () => {
 
     /*
@@ -18,9 +20,10 @@ describe('Clock', () => {
   });
 
   /*
-  All tests for render() are housed here.
+  All tests for the render() method are housed here.
   */
   describe('render', () => {
+
     it('should render clock to output', () => {
 
       const clock = TestUtils.renderIntoDocument(
@@ -37,6 +40,7 @@ describe('Clock', () => {
   });
 
   describe('formatSeconds', () => {
+
     it('should format seconds', () => {
 
       /*

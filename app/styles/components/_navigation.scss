@@ -15,7 +15,6 @@ in the Nav bar.
   background-color: $nav-background;
 }
 
-
 /*
 This nested selector is the equivalent of
 .top-bar .menu-text {}.
@@ -28,7 +27,8 @@ This nested selector is the equivalent of
   /*
   By default, Foundation uses
   .menu > li > a { display: block;
-  padding: .7rem 1rem; }
+  padding: .7rem 1rem; }, which puts links
+  on a line by itself.
   */
   .menu > .menu-text > a {
     display: inline;
