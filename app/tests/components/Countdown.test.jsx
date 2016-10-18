@@ -1,8 +1,8 @@
+const Countdown        = require('Countdown');
 const expect           = require('expect');
 const React            = require('react');
 const ReactDOM         = require('react-dom');
 const TestUtils        = require('react-addons-test-utils');
-const Countdown        = require('Countdown');
 const $                = require('jQuery');
 
 describe('Countdown', () => {
@@ -13,18 +13,26 @@ describe('Countdown', () => {
 
   describe('handleSetCountdown', () => {
 
+    /*
+    The setTimeout() function makes this it()
+    function ansychronous. For Mocha to support
+    asychronous tests, include the arg done, which
+    lets Mocha know that it sould wait until done is
+    called to stop the test. Then call done once
+    we're done.
+    */
     it('should set state to started and countdown',
         (done) => {
 
-      const countdown = TestUtils.renderIntoDocument(
-          <Countdown/>);
+      const countdown = TestUtils
+          .renderIntoDocument(<Countdown/>);
 
       countdown.handleSetCountdown(10);
 
       expect(countdown.state.count).toBe(10);
 
-      expect(countdown.state.countdownStatus).toBe(
-          'started');
+      expect(countdown.state.countdownStatus)
+          .toBe('started');
 
        setTimeout(() => {
          expect(countdown.state.count).toBe(9);
@@ -32,11 +40,11 @@ describe('Countdown', () => {
        }, 1001)
      });
 
-    it('should never set count less than zero',
+    it('should NOT set count to less than zero',
         (done) => {
 
-      const countdown = TestUtils.renderIntoDocument(
-          <Countdown/>);
+      const countdown = TestUtils
+          .renderIntoDocument(<Countdown/>);
 
       countdown.handleSetCountdown(1);
 
@@ -49,8 +57,8 @@ describe('Countdown', () => {
     it('should pause countdown on paused status',
         (done) => {
 
-      const countdown = TestUtils.renderIntoDocument(
-          <Countdown/>);
+      const countdown = TestUtils
+          .renderIntoDocument(<Countdown/>);
 
       countdown.handleSetCountdown(3);
       countdown.handleStatusChange('paused');
@@ -58,8 +66,8 @@ describe('Countdown', () => {
       setTimeout(() => {
         expect(countdown.state.count).toBe(3);
 
-        expect(countdown.state.countdownStatus).toBe(
-            'paused');
+        expect(countdown.state.countdownStatus)
+            .toBe('paused');
 
         done();
       }, 1001);
@@ -67,8 +75,8 @@ describe('Countdown', () => {
 
     it('should reset count on stopped', (done) => {
 
-      const countdown = TestUtils.renderIntoDocument(
-          <Countdown/>);
+      const countdown = TestUtils
+          .renderIntoDocument(<Countdown/>);
 
       countdown.handleSetCountdown(3);
       countdown.handleStatusChange('stopped');
@@ -76,8 +84,8 @@ describe('Countdown', () => {
       setTimeout(() => {
         expect(countdown.state.count).toBe(0);
 
-        expect(countdown.state.countdownStatus).toBe(
-            'stopped');
+        expect(countdown.state.countdownStatus)
+            .toBe('stopped');
 
         done();
       }, 1001);

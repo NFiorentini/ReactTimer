@@ -12,13 +12,17 @@ methods as is needed.
 */
 describe('CountdownForm', () => {
 
-  // We get a valid variable back.
+  /*
+  This basic test ensures that webpack.config.js
+  configured properly & that the module is loading.
+  */
   it('should exist', () => {
     expect(CountdownForm).toExist();
   });
 
   // Test for good data.
-  it('should call onSetCountdown if valid seconds entered', () => {
+  it(('should call onSetCountdown if valid ' +
+      'seconds entered'), () => {
 
     const spy = expect.createSpy();
 
@@ -28,13 +32,19 @@ describe('CountdownForm', () => {
     const $el = $(ReactDOM.findDOMNode(countdownForm));
 
     countdownForm.refs.seconds.value = '109';
+
+    /*
+    Use jQuery to find the first element on the
+    the DOM node with the 'form' & then submit it.
+    */
     TestUtils.Simulate.submit($el.find('form')[0]);
 
     expect(spy).toHaveBeenCalledWith(109);
   });
 
   // Test for bad data.
-  it('should not call onSetCountdown if invalid seconds entered', () => {
+  it(('should NOT call onSetCountdown if invalid ' +
+      'seconds entered'), () => {
 
     const spy = expect.createSpy();
 
@@ -43,7 +53,7 @@ describe('CountdownForm', () => {
 
     const $el = $(ReactDOM.findDOMNode(countdownForm));
 
-    countdownForm.refs.seconds.value = '109b';
+    countdownForm.refs.seconds.value = '109hahahaha';
     TestUtils.Simulate.submit($el.find('form')[0]);
 
     expect(spy).toNotHaveBeenCalled();

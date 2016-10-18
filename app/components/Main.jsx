@@ -2,6 +2,7 @@ const Navigation                    = require('Navigation');
 const React                         = require('react');
 
 const Main = (props) => {
+  
   return (
     <div>
       <Navigation/>
