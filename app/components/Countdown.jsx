@@ -48,7 +48,32 @@ const Countdown = React.createClass({
     }
   },
 
+  /*
+  componentWillUpdate(), componentWillMount(), &
+  componentDidMount() are here to demonstrate
+  additional React Lifecycle methods.
+
+  componentWillUpdate: function (nextProps, nextState) {
+    console.log('Countdown will update!');
+  },
+
+  componentWillMount: function () {
+    console.log('Countdown will mount!');
+  },
+
+  componentDidMount: function () {
+    console.log('Countdown did mount!');
+  },
+  */
+
+  /*
+  componentWillUnmount() is fired by React right before
+  the component is removed from the DOM (visually removed
+  from the browser).
+  */
   componentWillUnmount: function () {
+    // console.log('Countdown did unmount!!!');
+
     clearInterval(this.timer);
     this.timer = undefined;
   },
@@ -69,6 +94,12 @@ const Countdown = React.createClass({
         count: newCount >= 0 ? newCount : 0
       });
 
+      /*
+      Without this block, the interval continues
+      even after the countdown is at 0. This block
+      also sets the countdownStatus to stopped,
+      causing the CountdownForm to be re-rendered.
+      */
       if (newCount === 0) {
         this.setState({countdownStatus: 'stopped'});
       }

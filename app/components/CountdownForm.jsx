@@ -6,7 +6,7 @@ const CountdownForm = React.createClass({
     e.preventDefault();
     const strSeconds = this.refs.seconds.value;
 
-    console.log('input count', $('input').length);
+    // console.log('input count', $('input').length);
 
     if(strSeconds.match(/^[0-9]*$/)) {
       this.refs.seconds.value = '';

@@ -19,6 +19,17 @@ const Controls = React.createClass({
     }
   },
 
+  /*
+  componentWillReceiveProps() is here to demonstrate
+  another React Lifecycle method.
+
+  componentWillReceiveProps: function (newProps) {
+
+    console.log('componentWillReceiveProps',
+        newProps.countdownStatus);
+  },
+  */
+
   render: function () {
     const {countdownStatus} = this.props;
 

@@ -31,7 +31,27 @@ const Timer  = React.createClass({
     }
   },
 
+  /*
+  componentWillUpdate(), componentWillMount(), &
+  componentDidMount() are here to demonstrate
+  additional React Lifecycle methods.
+
+  componentWillUpdate: function (nextProps, nextState) {
+    console.log('Timer will update!');
+  },
+
+  componentWillMount: function () {
+    console.log('Timer will mount!');
+  },
+
+  componentDidMount: function () {
+    console.log('Timer did mount!');
+  },
+  */
+
   componentWillUnmount: function () {
+    // console.log('Timer did unmount!!!');
+
     clearInterval(this.timer);
   },
 
